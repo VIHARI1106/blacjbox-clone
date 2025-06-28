@@ -1,78 +1,55 @@
 # 🧠 Blackbox Clone – COSC Hackweek Challenge
 
-A backend server built using **Express.js** to mimic the mysterious and undocumented behavior of the Blackbox Interface APIs. This project explores reverse engineering by handling various unpredictable endpoints and returning structured responses.
-
-## 🚀 Live Testing Instructions
-
-You can test the server locally:
-
-http://localhost:3000/blackbox/<endpoint>
-
-pgsql
-Copy code
+This project is a backend API built using **Express.js** to mimic the behavior of a "black box" system with hidden, undocumented API endpoints. It was developed as part of the **COSC Hackweek – The Black Box Challenge** at CBIT.
 
 ---
 
-## 🛠️ Endpoints & Their Behavior
+## 🌐 Live API
 
-All endpoints accept **JSON POST requests** (except `/time`, which is a GET request).
-
-| Method | Endpoint        | Description                             |
-|--------|------------------|-----------------------------------------|
-| POST   | `/blackbox/data` | Returns a test message for `/data`      |
-| POST   | `/blackbox/fizzbuzz` | Returns a test message for `/fizzbuzz` |
-| POST   | `/blackbox/zap`  | Returns a test message for `/zap`       |
-| POST   | `/blackbox/alpha`| Returns a test message for `/alpha`     |
-| POST   | `/blackbox/glitch`| Returns a test message for `/glitch`   |
-| GET    | `/blackbox/time` | Returns the current server time in ISO format |
-
-### 📌 Sample Payload Format (POST)
-
-```json
-{
-  "data": "test input"
-}
-📁 Project Structure
-php
-Copy code
-blackbox-clone/
-├── routes/
-│   └── blackbox.js       # All route handlers
-├── app.js                # Main Express app
-├── package.json
-└── README.md
-🧪 Testing the API
-You can test the endpoints using:
-
-✅ Postman
-
-✅ curl (CLI)
-
-✅ axios in Node.js (blackbox.js script for automation)
-
-🧑‍💻 Tech Stack
-Node.js
-
-Express.js
-
-📌 Challenge Objective
-This project was submitted for the COSC Hackweek – Blackbox Challenge conducted by CBIT, where the task was to mimic the behavior of unknown endpoints purely through testing, experimentation, and reverse engineering.
-
-✅ Author
-Prabhugari Vihari
-GitHub: @VIHARI1106
-
-yaml
-Copy code
+> Deployed on Render  
+🔗 [https://blackbox-clone.onrender.com](https://blackbox-clone.onrender.com)
 
 ---
 
-### ✅ Next Step
+## 📁 GitHub Repository
 
-1. Save this as `README.md` in the root of your project.
-2. Run the following to commit and push:
+> Code available at:  
+🔗 [https://github.com/VIHARI1106/blacjbox-clone](https://github.com/VIHARI1106/blacjbox-clone)
+
+---
+
+## 📦 Tech Stack
+
+- **Backend**: Node.js + Express
+- **Hosting**: Render
+- **Testing**: Postman
+
+---
+
+## 🚀 Available Endpoints
+
+| Method | Endpoint               | Description                          |
+|--------|------------------------|--------------------------------------|
+| `POST` | `/blackbox/data`       | Test route – confirms endpoint works |
+| `POST` | `/blackbox/fizzbuzz`   | Placeholder endpoint                 |
+| `POST` | `/blackbox/zap`        | Placeholder endpoint                 |
+| `POST` | `/blackbox/alpha`      | Placeholder endpoint                 |
+| `POST` | `/blackbox/glitch`     | Placeholder endpoint                 |
+| `GET`  | `/blackbox/time`       | Returns current server time (ISO)    |
+
+🧪 All endpoints return JSON responses.
+
+---
+
+## 🛠️ How to Run Locally
 
 ```bash
-git add README.md
-git commit -m "Added README.md"
-git push
+git clone https://github.com/VIHARI1106/blacjbox-clone.git
+cd blacjbox-clone
+npm install
+node app.js
+Server starts at: http://localhost:3000
+
+📌 Author
+Prabhugari Vihari
+[CBIT – COSC Hackweek Participant]
